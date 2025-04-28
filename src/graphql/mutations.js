@@ -27,6 +27,7 @@ export const ADD_TODO = gql`
         $title: String!
         $description: String!
         $priority: Int!
+        $is_completed: Boolean!
         $user_id: Int!
     ) {
         insert_todos_one(
@@ -34,6 +35,7 @@ export const ADD_TODO = gql`
                 title: $title
                 description: $description
                 priority: $priority
+                is_completed: $is_completed
                 user_id: $user_id
             }
         ) {
